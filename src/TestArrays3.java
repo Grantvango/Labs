@@ -94,15 +94,7 @@ public class TestArrays3
            printTestTrailer();  
 	 */ 
 
-	/*
-	 * printArray
-	 *
-	 * input: an array of integers
-	 * output: (void)
-	 *
-	 * display all elements within an array, 4 spaces per element
-	 * print a new line after every 10 elements
-	 */ 
+	//Prints array with 4 spaces in between and only 10 numbers on a line
 	public static void printArray(String msg, int [] a)
 	{
 		System.out.println(msg + ":");
@@ -114,20 +106,9 @@ public class TestArrays3
 		}
 		System.out.println();
 	}
-	/*
-	 * populateArray
-	 *		input: an array of integers
-	 *		output:  (void)
-	 *
-	 *    populate the array with random values for a given range and offset
-	 *    each element should be within:  offset <= x < offset+range 
-	 *
-	 *  if the range is 100 and the offset is 10
-	 *  then the elements should be between 10 and 109
-	 *
-	 *  you do not have to return anything.  You are passed a reference to
-	 *  an array and you are modifying the elements of the array.  
-	 */
+	
+	
+	//range 100 offset 10 10-109 randome numbers in array
 	public static void populateArray(int [] a, int range, int offset)
 	{
 		for (int k=0; k<a.length; k++)
@@ -135,32 +116,16 @@ public class TestArrays3
 	}
 
 
-
-
-	/*
-	 * calculateAverage
-	 *		input: an array of integers
-	 *		output: double - average value
-	 *
-	 *    calculateAverage ( {10, 11, 12, 13} ) => 11.5
-	 *
-	 *    declare and initialize sum
-	 *    traverse the array
-	 *       add the element to sum
-	 *
-	 *    divide the sum by the number of elements (a.length)
-	 *    return the average
-	 */
-
+	//Returns average of an array
 	public static double calculateAverage(int [] a)
 	{
-		//declare and initialize sum
-
-		//todo: traverse the array, add each element to sum
-
-
-		//return the average value (double)
-		return 5.3;   //just so it compiles.....
+		int sum = 0;
+		
+		for (int i = 0; i < a.length; i++){
+			sum += a[i];
+		}
+		double average = sum / a.length;
+		return average;   
 	}
 
 	/*
@@ -176,7 +141,17 @@ public class TestArrays3
 	 */
 	public static double computeMedian(int [] a)
 	{
-		return 5.3;  //just so it compiles.....
+		double median = 0;
+		int mid = a.length / 2;
+		
+		if (a.length % 2 == 0){
+			median = a[mid] + a[mid + 1];
+		} else if (a.length % 2 == 1){
+			median = a[mid + 1];
+		} else {
+			return 99.99;
+		}
+		return median;  
 	}
 
 	/*
