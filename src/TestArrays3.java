@@ -113,11 +113,12 @@ public class TestArrays3
 	public static double calculateAverage(int [] a)
 	{
 		int sum = 0;
+		double nums = a.length;
 
 		for (int i = 0; i < a.length; i++){
 			sum += a[i];
 		}
-		double average = sum / a.length;
+		double average = (double)(sum / nums);
 		return average;   
 	}
 
