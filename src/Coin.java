@@ -4,7 +4,7 @@ public class Coin {
 	final static int HEADS = 1;
 	final static int TAILS = 0;
 	
-	int CoinsValue;
+	static int CoinsValue;
 	static int CoinsBias;
 	static int CoinsState;
 	
