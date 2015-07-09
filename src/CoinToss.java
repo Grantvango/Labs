@@ -75,12 +75,18 @@ public class CoinToss {
 
 			if(c1.getState() == 1){
 				player1count++;
+			} else {
+				player1count = 0;
 			}
 			if(c2.getState() == 1){
 				player2count++;
+			} else {
+				player2count = 0;
 			}
 			if(c3.getState() == 1){
 				player3count++;
+			} else {
+				player3count = 0;
 			}
 			
 			if (player1count == 4){
