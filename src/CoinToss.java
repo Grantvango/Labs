@@ -43,7 +43,7 @@ public class CoinToss {
 			if(c1.getState() == 1){
 				numHeads++;
 			}
-			if (x <= 10){
+			if (x < 10){
 				System.out.println(c1.getStringState());
 			}
 		}

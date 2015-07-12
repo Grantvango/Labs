@@ -8,9 +8,6 @@ public class Coin {
 	static int CoinsBias;
 	static int CoinsState;
 	
-	static int state;
-	static int bias;
-	static int value;
 	
 	static int num;
 	
